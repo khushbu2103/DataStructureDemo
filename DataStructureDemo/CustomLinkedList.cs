@@ -29,6 +29,7 @@ namespace DataStructureDemo
             }
         }
 
+        
         public Node GetlastNode()
         {
             Node temp = head;
@@ -37,6 +38,14 @@ namespace DataStructureDemo
                 temp = temp.next;
             }
             return temp;
+        }
+
+        public void AddFirst(int data)
+        {
+            Node newnode = new Node(data);
+            newnode.next = head;
+            head = newnode;
+            Console.WriteLine("{0} is added into linked list", newnode.data);
         }
         public void Display()
         {

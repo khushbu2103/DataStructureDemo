@@ -12,7 +12,7 @@ namespace DataStructureDemo
         {
             Console.WriteLine("Welcome to the data structure programs");
             Console.WriteLine("please choose any program");
-            Console.WriteLine("1.Buit-in LinkedList\n2.Custom LinkedList");
+            Console.WriteLine("1.Buit-in LinkedList\n2.Custom LinkedList\n3. addfirst method");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -41,7 +41,15 @@ namespace DataStructureDemo
                     customLinkedList.AddLast(70);
                     customLinkedList.Display();
                     break;
-               
+                case 3:
+                    CustomLinkedList customlinkedList = new CustomLinkedList();
+                    customlinkedList.AddFirst(56);
+                    customlinkedList.AddFirst(30);
+                    customlinkedList.AddFirst(70);
+                    customlinkedList.Display();
+
+                    break;
+
             }
             Console.ReadLine();
         }
