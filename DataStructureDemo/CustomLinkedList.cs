@@ -47,6 +47,11 @@ namespace DataStructureDemo
             head = newnode;
             Console.WriteLine("{0} is added into linked list", newnode.data);
         }
+
+        public void Append(int data)
+        {
+            AddLast(data);
+        }
         public void Display()
         {
             if(head == null)
