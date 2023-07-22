@@ -68,5 +68,25 @@ namespace DataStructureDemo
                 }
             }
         }
+
+        public void InsertAfter(int data, int newData)
+        {
+            Node newNode = new Node(newData);
+            Node currentNode = head;
+            while (currentNode != null && currentNode.data != data)
+            {
+                currentNode = currentNode.next;
+            }
+            if (currentNode != null)
+            {
+                newNode.next = currentNode.next;
+                currentNode.next = newNode;
+                Console.WriteLine("{0} is inserted into CustomLinkedList after {1}", newData, data);
+            }
+            else
+            {
+                Console.WriteLine("No node with data {0} found in CustomLinkedList", data);
+            }
+        }
     }
 }

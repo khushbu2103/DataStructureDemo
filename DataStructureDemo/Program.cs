@@ -37,8 +37,8 @@ namespace DataStructureDemo
                 case 2:
                     CustomLinkedList customLinkedList = new CustomLinkedList();
                     customLinkedList.Append(56);
-                    customLinkedList.Append(30);
                     customLinkedList.Append(70);
+                    customLinkedList.InsertAfter(56, 30);
                     customLinkedList.Display();
                     break;
               
