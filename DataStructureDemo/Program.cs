@@ -40,6 +40,8 @@ namespace DataStructureDemo
                     customLinkedList.Append(70);
                     customLinkedList.InsertAfter(56, 30);
                     customLinkedList.Display();
+                    customLinkedList.RemoveFirst();
+                    customLinkedList.Display();
                     break;
               
 

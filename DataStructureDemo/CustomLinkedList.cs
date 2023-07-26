@@ -88,5 +88,20 @@ namespace DataStructureDemo
                 Console.WriteLine("No node with data {0} found in CustomLinkedList", data);
             }
         }
+
+        public void RemoveFirst()
+        {
+            if (head == null)
+            {
+                return; Console.WriteLine("\nlinkedlist is empty");
+            }
+            else
+            {
+                int deletedNode = head.data;
+                head = head.next;
+                Console.WriteLine("\n{0} is delated from linkedlist", deletedNode);
+
+            }
+        }
     }
 }
