@@ -93,13 +93,35 @@ namespace DataStructureDemo
         {
             if (head == null)
             {
-                return; Console.WriteLine("\nlinkedlist is empty");
+                 Console.WriteLine("\nlinkedlist is empty");
             }
             else
             {
                 int deletedNode = head.data;
                 head = head.next;
                 Console.WriteLine("\n{0} is delated from linkedlist", deletedNode);
+
+            }
+        }
+
+        public void RemoveLast()
+        {
+            if( head == null)
+                Console.WriteLine("\nlinkedlist is empty");
+            else if (head.next == null)
+            {
+                Console.WriteLine("\n{0} is removed from last", head.data);
+                head = head.next;
+            }
+            else
+            {
+                Node temp = head;
+                while(temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                Console.WriteLine("\n{0} is removed from last", temp.next.data);
+                temp.next = null;
 
             }
         }
