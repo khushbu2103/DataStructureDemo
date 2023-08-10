@@ -42,7 +42,8 @@ namespace DataStructureDemo
                     customLinkedList.Display();
                     customLinkedList.RemoveLast();
                     customLinkedList.Display();
-                   
+                    customLinkedList.Search(30);
+
                     break;
               
 

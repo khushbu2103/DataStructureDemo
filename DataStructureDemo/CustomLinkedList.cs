@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -123,6 +124,32 @@ namespace DataStructureDemo
                 Console.WriteLine("\n{0} is removed from last", temp.next.data);
                 temp.next = null;
 
+            }
+        }
+
+        public void Search(int input)
+        {
+            bool isPresent = false;
+            if(head !=  null)
+            {
+                Node temp=head;
+                while(temp!=null)
+                {
+                    if (temp.data == input)
+                    {
+                        isPresent = true;
+                        Console.WriteLine("\n{0} is present in linkedlist", input);
+                        break;
+                    }
+                    else
+                    {
+                        temp = temp.next;
+                    }
+                }
+                if(!isPresent)
+                {
+                    Console.WriteLine("\n{0} is not present in linkedlist", input);
+                }
             }
         }
     }
