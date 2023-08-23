@@ -12,7 +12,7 @@ namespace DataStructureDemo
         {
             Console.WriteLine("Welcome to the data structure programs");
             Console.WriteLine("please choose any program");
-            Console.WriteLine("1.Buit-in LinkedList\n2.Custom LinkedList");
+            Console.WriteLine("1.Buit-in LinkedList\n2.Custom LinkedList\n3.Sorted custom linkedlist");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch(option)
@@ -48,6 +48,16 @@ namespace DataStructureDemo
                     customLinkedList.Display();
                     customLinkedList.DeleteInBetween(40);
                     customLinkedList.Display();
+                    
+                    break;
+                case 3:
+                    Sorted sortedList = new Sorted();
+                    sortedList.Add(56);
+                    sortedList.Add(30);
+                    sortedList.Add(40);
+                    sortedList.Add(70);
+                    Console.WriteLine("Sorted linked list:");
+                    sortedList.Display();
                     break;
             }
             Console.ReadLine();

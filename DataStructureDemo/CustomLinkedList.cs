@@ -175,7 +175,9 @@ namespace DataStructureDemo
 
         public void DeleteInBetween(int data)
         {
-            if(head == null)
+            Node newNode = new Node(data);
+            Node currentNode = head;
+            if (head == null)
             {
                 Console.WriteLine("No data is present in linkedlist");
             }
@@ -188,8 +190,9 @@ namespace DataStructureDemo
             Node previousNode = FindPreviousNode(data);
             if(previousNode !=null && previousNode.next != null)
             {
-                previousNode.next = previousNode.next.next;
-                Console.WriteLine("\n{0} is deleted from linkedlist", data);
+                newNode.next = currentNode.next;
+                currentNode.next = newNode;
+                Console.WriteLine("\n{0} is added in linkedlist", data);
                 Console.WriteLine("size of linked list is: {0}", Size());
             }
         }
@@ -225,6 +228,7 @@ namespace DataStructureDemo
             }
             return size;
         }
+
 
     }
 }
