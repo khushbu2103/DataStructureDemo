@@ -14,6 +14,7 @@ namespace DataStructureDemo
             Console.WriteLine("please choose any program");
             Console.WriteLine("1.Buit-in LinkedList\n2.Custom LinkedList");
             int option = Convert.ToInt32(Console.ReadLine());
+
             switch(option)
             {
                 case 1:
@@ -40,13 +41,21 @@ namespace DataStructureDemo
                     customLinkedList.Append(70);
                     customLinkedList.InsertAfter(56, 30);
                     customLinkedList.Display();
-                    customLinkedList.RemoveLast();
-                    customLinkedList.Display();
+                    //customLinkedList.RemoveLast();
+                    //customLinkedList.Display();
                     customLinkedList.Search(30);
-
+                    //customLinkedList.InsertBetween(30, 70, 40);
+                    //customLinkedList.Display();
+                    Console.WriteLine("\nEnter data of the first node:");
+                    int firstData = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter data of the second node:");
+                    int secondData = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter data of the new node:");
+                    int newData = Convert.ToInt32(Console.ReadLine());
+                    customLinkedList.InsertBetween(firstData, secondData, newData);
+                    customLinkedList.Display();
+                   
                     break;
-              
-
             }
             Console.ReadLine();
         }
