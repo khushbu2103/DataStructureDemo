@@ -173,6 +173,58 @@ namespace DataStructureDemo
             }
         }
 
-        
+        public void DeleteInBetween(int data)
+        {
+            if(head == null)
+            {
+                Console.WriteLine("No data is present in linkedlist");
+            }
+            if(head.data == data)
+            {
+                head = head.next;
+                Console.WriteLine("{0} is deleted from list", data);
+                Console.WriteLine("{0} size of linked list is:", Size());
+            }
+            Node previousNode = FindPreviousNode(data);
+            if(previousNode !=null && previousNode.next != null)
+            {
+                previousNode.next = previousNode.next.next;
+                Console.WriteLine("\n{0} is deleted from linkedlist", data);
+                Console.WriteLine("size of linked list is: {0}", Size());
+            }
+        }
+
+        //Method to search for a previous of a node with specified data and return it
+        private Node FindPreviousNode(int data)
+        {
+            Node currentNode = head;
+           while(currentNode != null)
+            {
+                if (currentNode.next != null && currentNode.next.data == data)
+                {
+                    return currentNode;
+                }
+                else
+                {
+                    currentNode = currentNode.next;
+                }
+            }
+            return null;
+        }
+
+        //Method to return the size if the list
+        public int Size()
+        {
+            int size = 0;
+            Node currentNode = head;
+            while(currentNode != null)
+            {
+                size++;
+                currentNode = currentNode.next;
+
+            }
+            return size;
+        }
+
     }
 }

@@ -44,17 +44,10 @@ namespace DataStructureDemo
                     //customLinkedList.RemoveLast();
                     //customLinkedList.Display();
                     customLinkedList.Search(30);
-                    //customLinkedList.InsertBetween(30, 70, 40);
-                    //customLinkedList.Display();
-                    Console.WriteLine("\nEnter data of the first node:");
-                    int firstData = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Enter data of the second node:");
-                    int secondData = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Enter data of the new node:");
-                    int newData = Convert.ToInt32(Console.ReadLine());
-                    customLinkedList.InsertBetween(firstData, secondData, newData);
+                    customLinkedList.InsertBetween(30, 70, 40);
                     customLinkedList.Display();
-                   
+                    customLinkedList.DeleteInBetween(40);
+                    customLinkedList.Display();
                     break;
             }
             Console.ReadLine();
