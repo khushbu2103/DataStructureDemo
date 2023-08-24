@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace DataStructureDemo
         {
             Console.WriteLine("Welcome to the data structure programs");
             Console.WriteLine("please choose any program");
-            Console.WriteLine("1.Buit-in LinkedList\n2.Custom LinkedList\n3.Sorted custom linkedlist");
+            Console.WriteLine("1.Buit-in LinkedList\n2.Custom LinkedList\n3.Sorted custom linkedlist\n4.Built in stack\n5.Linkedlist stack");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch(option)
@@ -59,7 +60,27 @@ namespace DataStructureDemo
                     Console.WriteLine("Sorted linked list:");
                     sortedList.Display();
                     break;
+                case 4:
+                    Stack<int> stack = new Stack<int>();
+                    stack.Push(70);
+                    stack.Push(30);
+                    stack.Push(56);
+                    foreach(int data in stack)
+                    {
+                        Console.Write(data + " ");
+                    }
+                    break;
+
+                   //Stack programs
+                case 5:
+                    LinkedListStack linkedListStack = new LinkedListStack();
+                    linkedListStack.Push(70);
+                    linkedListStack.Push(30);
+                    linkedListStack.Push(56);
+                    linkedListStack.Display();
+                    break;
             }
+            
             Console.ReadLine();
         }
     }
