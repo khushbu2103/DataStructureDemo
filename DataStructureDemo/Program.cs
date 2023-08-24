@@ -60,6 +60,10 @@ namespace DataStructureDemo
                     Console.WriteLine("Sorted linked list:");
                     sortedList.Display();
                     break;
+
+                //Stack programs
+
+                //1. builtin method
                 case 4:
                     Stack<int> stack = new Stack<int>();
                     stack.Push(70);
@@ -71,12 +75,16 @@ namespace DataStructureDemo
                     }
                     break;
 
-                   //Stack programs
+                    //2. by custom linkedlist method
                 case 5:
                     LinkedListStack linkedListStack = new LinkedListStack();
                     linkedListStack.Push(70);
                     linkedListStack.Push(30);
                     linkedListStack.Push(56);
+                    linkedListStack.Display();
+                    linkedListStack.Peek();
+                    linkedListStack.Pop();
+                    linkedListStack.MakeStakeEmpty();
                     linkedListStack.Display();
                     break;
             }

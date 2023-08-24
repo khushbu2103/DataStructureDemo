@@ -41,5 +41,39 @@ namespace DataStructureDemo
                 Console.Write("no data present in linked list");
             }
         }
+
+        public void Peek()
+        {
+            if(top != null)
+            {
+                Console.WriteLine("\n{0} is to top most element of stack", top.data);
+            }
+            else
+            {
+                Console.WriteLine("stack is empty");
+            }
+        }
+
+        public void Pop()
+        {
+            if(top.data != 0)
+            {
+                Console.WriteLine("{0} is deleted from stack", top.data);
+                top = top.next;
+            }
+            else
+            {
+                Console.WriteLine("stack is empty");
+            }
+        }
+        public void MakeStakeEmpty()
+        {
+            while(top != null)
+            {
+                Peek();
+                Pop();
+            }
+            Console.WriteLine("\nStack is empty");
+        }
     }
 }
