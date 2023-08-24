@@ -25,7 +25,6 @@ namespace DataStructureDemo
                 Console.WriteLine("{0} is added on the top level in the stack", data);
             }
         }
-
         public void Display()
         {
             if (top != null)
