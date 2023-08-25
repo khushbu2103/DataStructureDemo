@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomLinkedList.cs" />
+    <Compile Include="LinkedListQueue.cs" />
     <Compile Include="LinkedListStack.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />

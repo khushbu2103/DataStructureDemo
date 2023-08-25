@@ -13,7 +13,13 @@ namespace DataStructureDemo
         {
             Console.WriteLine("Welcome to the data structure programs");
             Console.WriteLine("please choose any program");
-            Console.WriteLine("1.Buit-in LinkedList\n2.Custom LinkedList\n3.Sorted custom linkedlist\n4.Built in stack\n5.Linkedlist stack");
+            Console.WriteLine("1.Buit-in LinkedList\n" +
+                "2.Custom LinkedList\n" +
+                "3.Sorted custom linkedlist\n" +
+                "4.Built-in stack\n" +
+                "5.Linkedlist stack\n" +
+                "6.Built-in Queue\n" +
+                "7.Custom queue");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch(option)
@@ -86,6 +92,28 @@ namespace DataStructureDemo
                     linkedListStack.Pop();
                     linkedListStack.MakeStakeEmpty();
                     linkedListStack.Display();
+                    break;
+
+                    // Queue process
+                    //1.builtin method
+                case 6:
+                    Queue<int> queue = new Queue<int>();
+                    queue.Enqueue(56);
+                    queue.Enqueue(30);
+                    queue.Enqueue(70);
+                    foreach (int data in queue)
+                    {
+                        Console.Write(data + " ");
+                    }
+                    break;
+
+                    //custom method
+                case 7:
+                    LinkedListQueue linkedListQueue = new LinkedListQueue();
+                    linkedListQueue.Enqueue(56);
+                    linkedListQueue.Enqueue(30);
+                    linkedListQueue.Enqueue(70);
+                    linkedListQueue.Display();
                     break;
             }
             
