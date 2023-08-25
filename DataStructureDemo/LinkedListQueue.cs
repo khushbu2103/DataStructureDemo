@@ -9,6 +9,11 @@ namespace DataStructureDemo
 {
     internal class LinkedListQueue
     {
+        private CustomLinkedList queueList;
+        public LinkedListQueue()
+        {
+            queueList = new CustomLinkedList();
+        }
         public Node head;
         public void Enqueue(int item)
         {
@@ -43,6 +48,30 @@ namespace DataStructureDemo
             else
             {
                 Console.Write("no data present in linked list");
+            }
+        }
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Cannot dequeue from an empty queue");
+                
+            }
+            else
+            {
+                if (this.head.data != 0)
+                {
+                    while(this.head != null)
+                    {
+                        Console.WriteLine("\n{0} is deleted from stack", this.head.data);
+                        this.head = this.head.next;
+                    }
+                   
+                }
+                else
+                {
+                    Console.WriteLine("stack is empty");
+                }
             }
         }
     }
